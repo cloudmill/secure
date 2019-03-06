@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ОхраПро</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="canonical" href="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <!-- iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Case__fy">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <!-- Android-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#f8aa27">
+    <link rel="icon" type="image/png" href="images/touch/android-chrome-192x192.png" sizes="192x192">
+    <!-- Windows-->
+    <meta name="msapplication-TileImage" content="images/touch/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#f8aa27">
+    <!-- Standard-->
+    <link rel="icon" type="image/png" href="images/touch/favicon.png" sizes="128x128">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Styles--><link rel="stylesheet" href="styles/plugins.css">
+<link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="page-index"><!--[if lt IE 9]>
+    <p class="browsehappy">Данный сайт построен на передовых, современных технологиях и не поддерживает Ваш браузер. Настоятельно рекомендуем выбрать и установить любой из &nbsp;<a href="http://browsehappy.com/" target="_blank">современных браузеров.</a> Это бесплатно и займет всего несколько минут.</p><![endif]-->
+    <div class="mfp-hide white-popup-block" id="callme">
+      <form method="POST" action="">
+        <h3>Заказать обратный звонок</h3>
+        <div class="form__group">
+            <div>
+              <label for="name1"></label>
+              <input class="control error" type="text" name="name" id="name1" placeholder="Ваше имя" required><span class="error">Введите имя</span>
+            </div>
+        </div>
+        <div class="form__group">
+            <div>
+              <label for="phone1"></label>
+              <input class="control error" type="text" name="phone" id="phone1" placeholder="Ваш телефон" required><span class="error">Введите телефон</span>
+            </div>
+        </div>
+        <div class="form__group">
+            <div>
+              <label for="email1"></label>
+              <input class="control" type="email" name="email" id="email1" placeholder="Ваш email" required>
+            </div>
+        </div>
+        <div class="form__group">
+            <label for="message"></label>
+            <textarea class="control" name="message" id="message" placeholder="Введите ваш вопрос" rows="2"></textarea>
+        </div>
+        <div class="form__group">
+          <div class="file_upload"><span class="icon-url"></span>
+            <div class="innerTxt">Прикрепите файл</div>
+            <input type="file">
+          </div>
+        </div>
+        <div class="form__group">
+            <div class="checkbox">
+              <input type="checkbox" id="agreement1">
+              <label for="agreement1">Даю согласие на обработку персональных данных</label>
+            </div>
+        </div>
+        <button class="btn btn--blue" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="mfp-hide white-popup-block" id="auth">
+      <form method="POST" action="">
+        <h3>Авторизация</h3>
+        <div class="form__group">
+            <div>
+              <label for="name2"></label>
+              <input class="control" type="text" name="name" id="name2" placeholder="Ваш логин" required>
+            </div>
+        </div>
+        <div class="form__group">
+            <div>
+              <label for="password"></label>
+              <input class="control" type="password" name="password" id="password" placeholder="Ваш пароль" required>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="checkbox">
+              <input type="checkbox" id="ready">
+              <label for="ready">Я ознакомлен с документами учебного центра</label>
+            </div>
+        </div>
+        <div class="flexBtn">
+          <button class="btn btn--blue" type="submit">Отправить</button><a class="btn btn--primary popup-modal" href="#pass">Забыл пароль</a>
+        </div>
+      </form>
+    </div>
+    <div class="mfp-hide white-popup-block" id="pass">
+      <form method="POST" action="">
+        <h3>Запрос пароля</h3>
+        <p>Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.</p>
+        <div class="form__group">
+            <div>
+              <label for="name"></label>
+              <input class="control error" type="text" name="name" id="name" placeholder="Ваш логин" required><span class="error">Логин или EMail не найдены</span>
+            </div>
+        </div>
+        <button class="btn btn--blue" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="mfp-hide white-popup-block" id="thanks">
+      <h3>Спасибо!</h3>
+      <p>Мы свяжемся с вами через несколько минут!</p><a class="btn btn--blue popup-modal-dismiss" href="#">Закрыть</a>
+    </div>
+    <header class="page-header fixed">
+      <nav class="mobilenav">
+        <div class="mobilenav-top">
+          <div class="hidden__sm hidden__xs"><a class="close-nav--js" href="#"><span class="icon-close"></span></a><a href="/"><img src="images/logo-wh.png" alt=""></a></div>
+          <div class="mobilenav-icons"><a href="/"><img src="images/logo-mw.png" alt=""></a><a class="close-nav--js" href="#"><span class="icon-close"></span></a>
+            <div class="line"></div><a class="page-header__email" href="mailto:sale@oxrapro.ru"><i class="icon-email"></i></a>
+            <div class="line"></div><a class="page-header__call" href="tel:88003339887"><i class="icon-call"></i></a>
+            <div class="line"></div><a class="popup-modal page-header__login" href="#auth"><i class="icon-profile_round"></i></a>
+          </div>
+        </div>
+        <div class="mobilenav-center">
+            <ul class="main-nav">
+              <li class="main-nav__item"><a class="main-nav__link" href="/" title="Услуги">Услуги</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Цены">Цены</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Видео">Видео</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Блог">Блог</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="FAQ">FAQ</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Новости">Новости</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="О нас">О нас</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Контакты">Контакты</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div class="mobilenav-bottom"><a class="btn btn--blue btn--full popup-modal" href="#callme"><span class="icon-call"></span><span>Заказать звонок</span></a><a class="btn btn--primary btn--full popup-modal" href="#auth"><span class="icon-profile"></span><span>Войти</span></a></div>
+      </nav>
+      <div class="container">
+        <div class="page-header-inner">
+          <div class="visible__xs visible__sm"><a href="/"><img src="images/logo-m.svg" alt="ОхраПро"></a></div>
+          <div class="page-header__menu"><a class="main-nav--js" href="#"><img src="images/menu.svg" alt=""></a></div>
+          <div class="page-header__logo hidden__xs hidden__sm"><a href="/"><img src="images/logo.png" alt="ОхраПро"></a></div>
+          <nav class="nav">
+              <ul class="main-nav">
+                <li class="main-nav__item"><a class="main-nav__link" href="/" title="О нас">О нас</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="" title="Услуги">Услуги</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="" title="Цены">Цены</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="" title="Контакты">Контакты</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+              </ul>
+          </nav>
+          <div class="line"></div><a class="page-header__email" href="mailto:sale@oxrapro.ru"><i class="icon-email"></i></a>
+          <div class="line"></div><a class="page-header__mail hidden__xs hidden__sm" href="mailto:sale@oxrapro.ru"><span>sale@oxrapro.ru</span></a><a class="page-header__call" href="tel:88003339887"><i class="icon-call"></i><span>8 800 333 98 87</span></a>
+          <div class="line"></div><a class="popup-modal page-header__login" href="#login"><i class="icon-profile_round"></i><span>Войти</span></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="aboutPage">
+        <div class="container relative">
+          <div class="hidden__sm hidden__xs pulled-right">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item active">О нас</li>
+              <li class="breadcrumbs__item active"><a class="breadcrumbs__link" href="/"><span class="icon-home"></span></a></li>
+            </ul>
+          </div>
+          <div class="title">
+            <div class="is-col__lg-6 is-col__xs-12">
+              <h1>Мы открытая и технологичная компания</h1>
+            </div>
+          </div>
+          <div class="is-col__lg-5 is-col__xs-12">
+            <p>Свою открытость и технологичность, компания транслирует через собственные разработки. Мобильное приложение, которое позволяет клиентам учебного центра быстрее осваивать материал.</p>
+            <p>Процесс обучения геймефицирован, что существенно сказывается на вовлеченности и на скорости усвоения учебных материалов.</p>
+            <p>Компания разработала личный кабинет, который позволяет клиенту следить за ходом дел в компании. Помимо этого, в штате «ОхраПро» работает большое количество высококлассных специалистов, которые напрямую способствуют высокому качеству оказания услуг.</p><a class="aboutPageLink" href="#">История компании</a>
+          </div>
+          <div class="aboutPage-directions">
+            <div class="is-col__xl-7 is-col__lg-9 is-col__xs-12 centered-block">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__lg-4 is-col__md-5 is-col__xs-12">
+                  <div class="aboutPage-directions__num">4</div>
+                </div>
+                <div class="is-col is-col__lg-7 is-col__md-7 is-col__xs-12">
+                  <h2>основных направления компании</h2>
+                  <div class="element">
+                    <div class="element-left element-left--success"><span class="icon-icon-1"></span></div>
+                    <div class="element-right">
+                      <h5>Экология</h5>
+                      <p>Свою открытость и технологичность, компания транслирует через собственные разработки. Мобильное приложение, которое позволяет.</p>
+                    </div>
+                  </div>
+                  <div class="element">
+                    <div class="element-left element-left--primary"><span class="icon-icon-1"></span></div>
+                    <div class="element-right">
+                      <h5>Охрана труда</h5>
+                      <p>Свою открытость и технологичность, компания транслирует через собственные разработки. Мобильное приложение, которое позволяет.</p>
+                    </div>
+                  </div>
+                  <div class="element">
+                    <div class="element-left element-left--warning"><span class="icon-icon-1"></span></div>
+                    <div class="element-right">
+                      <h5>Учебный центр</h5>
+                      <p>Свою открытость и технологичность, компания транслирует через собственные разработки. Мобильное приложение, которое позволяет.</p>
+                    </div>
+                  </div>
+                  <div class="element">
+                    <div class="element-left element-left--danger"><span class="icon-icon-1"></span></div>
+                    <div class="element-right">
+                      <h5>Пожарная безопасность</h5>
+                      <p>Свою открытость и технологичность, компания транслирует через собственные разработки. Мобильное приложение, которое позволяет.</p><a class="aboutPageLink" href="#">История компании</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="aboutPage-license is-row">
+            <div class="aboutGrid is-col is-col__xl-8 is-col__xs-12">
+              <div class="aboutPage-license__desc">
+                <h2>Имеем все необходимые лицензии и документы</h2>
+                <ul class="list--inline">
+                  <li><a class="aboutPageLink" href="#">Документация</a></li>
+                  <li>|</li>
+                  <li><a class="aboutPageLink" href="#">Сертификаты</a></li>
+                </ul>
+              </div>
+              <div class="aboutPage-license__img"><img src="images/lic-1.jpg" alt=""></div>
+              <div class="aboutPage-license__img"><img src="images/lic-3.jpg" alt=""></div>
+              <div class="aboutPage-license__img"><img src="images/lic-4.jpg" alt=""></div>
+              <div class="aboutPage-license__img"><img src="images/lic-5.jpg" alt=""></div>
+            </div>
+            <div class="aboutGrid is-col is-col__lg-4 aboutGrid--xl">
+              <div class="aboutPage-license__img"><img src="images/lic-2.jpg" alt=""></div>
+              <div class="aboutPage-license__img"><img src="images/lic-6.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="aboutPage-projects">
+            <div class="aboutPage-projects__num"><span>200<</span>
+              <h2>и более <br> реализованных <br> проектов</h2><a class="btn btn--dark" href="#">Все проекты</a>
+            </div>
+            <div class="is-row between__xs">
+              <div class="is-col">
+                <div class="aboutPage-projects__img"><img src="images/grey-1.png" alt=""></div>
+              </div>
+              <div class="is-col">
+                <div class="aboutPage-projects__img"><img src="images/grey-2.png" alt=""></div>
+              </div>
+              <div class="is-col">
+                <div class="aboutPage-projects__img"><img src="images/grey-1.png" alt=""></div>
+              </div>
+              <div class="is-col">
+                <div class="aboutPage-projects__img"><img src="images/grey-2.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="aboutPage-clients">
+            <div class="is-col__xl-5 is-col__lg-6 is-col__xs-12">
+              <h2>Оказываем самые качественные услуги на рынке</h2>
+              <p>Свою открытость и технологичность, компания транслирует через собственные разработки. Мобильное приложение, которое позволяет клиентам учебного центра быстрее осваивать материал. Процесс обучения геймефицирован, что существенно сказывается на вовлеченности и на скорости усвоения учебных материалов.</p>
+              <p>Компания разработала личный кабинет, который позволяет клиенту следить за ходом дел в компании. омпании. Помимо этого, в штате «ОхраПро» работает большое количество высококлассных специалистов, которые напрямую способствуют высокому качеству оказания услуг.</p>
+              <div class="button"><a class="btn btn--primary" href="#">Скачать презентацию</a>
+                <div class="btn--shadow btn--black"></div>
+              </div>
+            </div>
+            <svg class="maps-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1030 783">
+              <image width="1030" height="783" x="0" y="0" xlink:href="images/map-line.png"></image>
+              <path fill="#fb5820" d="M189.54,300.94a5.46,5.46,0,1,1-4.17,6.5,5.45,5.45,0,0,1,4.17-6.5Z"></path>
+              <path fill="#fb5820" d="M202.24,423.91a6.63,6.63,0,0,1,3,12.92l-.18,0a6.63,6.63,0,0,1-2.84-13Z"></path>
+              <path fill="#fb5820" d="M131.75,588.85a5.46,5.46,0,0,1,2.51,10.62l-.18,0a5.46,5.46,0,0,1-2.33-10.66Z"></path>
+              <path fill="#fb5820" d="M120.8,650.15a5.46,5.46,0,0,1,2.5,10.63l-.16,0a5.46,5.46,0,0,1-2.34-10.66Z"></path>
+              <path fill="#fb5820" d="M462.52,522.47a5.46,5.46,0,1,1-4.13,6.45,5.46,5.46,0,0,1,4.13-6.45Z"></path>
+              <path fill="#fb5820" d="M522.5,545.89a5.46,5.46,0,1,1-4.16,6.5,5.46,5.46,0,0,1,4.16-6.5Z"></path>
+              <path fill="#fb5820" d="M708.15,609.83a5.46,5.46,0,0,1,2.49,10.63l-.15,0a5.46,5.46,0,0,1-2.34-10.66Z"></path>
+            </svg>
+          </div>
+          <div class="aboutPage-worker">
+            <div class="service-slider">
+              <h2>Жизнь внутри</h2>
+              <div class="swiper-about">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/workers-1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/workers-1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/workers-1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/workers-1.jpg" alt=""></div>
+                </div>
+                <div class="swiper-settings hidden__xs hidden__sm"><a class="btn btn--dark" href="#">Сотрудники</a>
+                  <div class="swiper-btn">
+                    <div class="swiper-btn-prev-p swiper-btn-prev"><span class="icon-angle-left"></span></div>
+                    <div class="swiper-btn-next-p swiper-btn-next"><span class="icon-angle-right"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="visible__sm visible__xs"><a class="btn btn--dark btn--full" href="#">Сотрудники</a></div>
+            </div>
+          </div>
+          <div class="aboutPage-history about-tabs">
+            <h2>История компании</h2>
+            <div class="tabs-inner relative">
+              <ul class="tabs__caption">
+                <li class="active" data-tab="tab1">1995</li>
+                <li data-tab="tab2">2000</li>
+                <li data-tab="tab3">2004</li>
+                <li data-tab="tab4">2007</li>
+                <li data-tab="tab5">2010</li>
+                <li data-tab="tab6">2015</li>
+                <li data-tab="tab7">2018</li>
+              </ul>
+              <div class="line"></div>
+            </div>
+            <div class="tabs__content active" id="tab1">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" id="tab2">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" id="tab3">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" id="tab4">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" id="tab5">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" id="tab6">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" id="tab7">
+              <div class="is-row between__xs">
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+                <div class="is-col is-col__md-6 is-col__xs-12">
+                  <div class="item">
+                    <p class="text__lg text--warning">20 февраля</p>
+                    <p>Два американца — братья Чарльз и Джордж Пейдж — основали «Англо-швейцарскую компанию по производству сгущённого молока». Используя свежее молоко.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="aboutPage-contacts">
+            <div class="title">
+              <h2>Мы в постоянном поиске новых специалистов!</h2>
+              <div class="aboutPage-contacts__ava">
+                <div class="ava"><img src="images/ava.png" alt=""></div>
+                <div class="information">
+                  <div class="name">Иван Петров</div>
+                  <div class="desc">Менеджер отдела кадров</div>
+                </div>
+              </div>
+            </div><a class="aboutPageLink" href="#">Все вакансии</a><a class="aboutPage-contacts__email" href="mailto:work@oxrapro.ru">work@oxrapro.ru</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer-top">
+        <div class="container">
+          <div class="visible__xs visible__sm"><a class="main-footer--js" href="#"><img src="images/menu.svg" alt=""></a></div>
+            <ul class="main-nav">
+              <li class="main-nav__item"><a class="main-nav__link" href="/" title="Услуги">Услуги</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Цены">Цены</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Видео">Видео</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Блог">Блог</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="FAQ">FAQ</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Новости">Новости</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="О нас">О нас</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Контакты">Контакты</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="page-footer-bottom">
+        <div class="container">
+          <div class="is-row between__xs middle__xs">
+            <div class="is-col is-col__md-4 is-col__xs-12">
+              <div class="page-footer__mail"><span class="icon-email"></span><a href="mailto:sale@oxrapro.ru">sale@oxrapro.ru</a></div>
+              <div class="page-footer__adr">г. Санкт-Петербург, ул. Вербная д. 27, лит А, оф. 825</div>
+            </div>
+            <div class="is-col is-col__lg-2 is-col__md-4 is-col__xs-12 text--center">
+              <ul class="list--inline social">
+                <li><a href="#"><span class="icon-vk"></span></a></li>
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+            <div class="is-col is-col__xl-5 is-col__lg-6 is-col__md-4 is-col__xs-12 text__lg--right hidden__xs hidden__sm">
+              <ul class="list--inline">
+                <li class="button"><a class="btn btn--primary popup-modal" href="#callme">Позвонить нам</a>
+                  <div class="btn--shadow btn--black"></div>
+                </li>
+                <li class="button"><a class="btn btn--info popup-modal" href="#auth"><span class="icon-profile_round"></span><span>Войти</span></a>
+                  <div class="btn--shadow btn--white"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="is-row between__xs middle__xs page-footer-txt">
+            <div class="is-col hidden__xs hidden__sm">
+              <div class="page-footer__copy">ОхраПро 2013-2018 © <br> Все права защищены</div>
+            </div>
+            <div class="is-col app"><a href="#"><img src="images/app-1.png" alt></a><a href="#"><img src="images/app-2.png" alt></a></div>
+            <div class="is-col hidden__xs hidden__sm"><a href="#">Пользовательское <br> соглашение</a></div>
+            <div class="is-col">
+              <div class="page-footer__link">Разработка и дизайн —<br><a href="#">Digital Production CloudMill</a></div>
+              <div class="visible__sm visible__xs">
+                <div class="page-footer__copy">ОхраПро 2013-2018 © <br> Все права защищены</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src="scripts/plugins.js"></script>
+<script src="scripts/main.js"></script>
+  </body>
+</html>

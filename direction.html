@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ОхраПро</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="canonical" href="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <!-- iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Case__fy">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <!-- Android-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#f8aa27">
+    <link rel="icon" type="image/png" href="images/touch/android-chrome-192x192.png" sizes="192x192">
+    <!-- Windows-->
+    <meta name="msapplication-TileImage" content="images/touch/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#f8aa27">
+    <!-- Standard-->
+    <link rel="icon" type="image/png" href="images/touch/favicon.png" sizes="128x128">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Styles--><link rel="stylesheet" href="styles/plugins.css">
+<link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="page-index"><!--[if lt IE 9]>
+    <p class="browsehappy">Данный сайт построен на передовых, современных технологиях и не поддерживает Ваш браузер. Настоятельно рекомендуем выбрать и установить любой из &nbsp;<a href="http://browsehappy.com/" target="_blank">современных браузеров.</a> Это бесплатно и займет всего несколько минут.</p><![endif]-->
+    <div class="mfp-hide white-popup-block" id="callme">
+      <form method="POST" action="">
+        <h3>Заказать обратный звонок</h3>
+        <div class="form__group">
+            <div>
+              <label for="name1"></label>
+              <input class="control error" type="text" name="name" id="name1" placeholder="Ваше имя" required><span class="error">Введите имя</span>
+            </div>
+        </div>
+        <div class="form__group">
+            <div>
+              <label for="phone1"></label>
+              <input class="control error" type="text" name="phone" id="phone1" placeholder="Ваш телефон" required><span class="error">Введите телефон</span>
+            </div>
+        </div>
+        <div class="form__group">
+            <div>
+              <label for="email1"></label>
+              <input class="control" type="email" name="email" id="email1" placeholder="Ваш email" required>
+            </div>
+        </div>
+        <div class="form__group">
+            <label for="message"></label>
+            <textarea class="control" name="message" id="message" placeholder="Введите ваш вопрос" rows="2"></textarea>
+        </div>
+        <div class="form__group">
+          <div class="file_upload"><span class="icon-url"></span>
+            <div class="innerTxt">Прикрепите файл</div>
+            <input type="file">
+          </div>
+        </div>
+        <div class="form__group">
+            <div class="checkbox">
+              <input type="checkbox" id="agreement1">
+              <label for="agreement1">Даю согласие на обработку персональных данных</label>
+            </div>
+        </div>
+        <button class="btn btn--blue" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="mfp-hide white-popup-block" id="auth">
+      <form method="POST" action="">
+        <h3>Авторизация</h3>
+        <div class="form__group">
+            <div>
+              <label for="name2"></label>
+              <input class="control" type="text" name="name" id="name2" placeholder="Ваш логин" required>
+            </div>
+        </div>
+        <div class="form__group">
+            <div>
+              <label for="password"></label>
+              <input class="control" type="password" name="password" id="password" placeholder="Ваш пароль" required>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="checkbox">
+              <input type="checkbox" id="ready">
+              <label for="ready">Я ознакомлен с документами учебного центра</label>
+            </div>
+        </div>
+        <div class="flexBtn">
+          <button class="btn btn--blue" type="submit">Отправить</button><a class="btn btn--primary popup-modal" href="#pass">Забыл пароль</a>
+        </div>
+      </form>
+    </div>
+    <div class="mfp-hide white-popup-block" id="pass">
+      <form method="POST" action="">
+        <h3>Запрос пароля</h3>
+        <p>Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.</p>
+        <div class="form__group">
+            <div>
+              <label for="name"></label>
+              <input class="control error" type="text" name="name" id="name" placeholder="Ваш логин" required><span class="error">Логин или EMail не найдены</span>
+            </div>
+        </div>
+        <button class="btn btn--blue" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="mfp-hide white-popup-block" id="thanks">
+      <h3>Спасибо!</h3>
+      <p>Мы свяжемся с вами через несколько минут!</p><a class="btn btn--blue popup-modal-dismiss" href="#">Закрыть</a>
+    </div>
+    <header class="page-header fixed">
+      <nav class="mobilenav">
+        <div class="mobilenav-top">
+          <div class="hidden__sm hidden__xs"><a class="close-nav--js" href="#"><span class="icon-close"></span></a><a href="/"><img src="images/logo-wh.png" alt=""></a></div>
+          <div class="mobilenav-icons"><a href="/"><img src="images/logo-mw.png" alt=""></a><a class="close-nav--js" href="#"><span class="icon-close"></span></a>
+            <div class="line"></div><a class="page-header__email" href="mailto:sale@oxrapro.ru"><i class="icon-email"></i></a>
+            <div class="line"></div><a class="page-header__call" href="tel:88003339887"><i class="icon-call"></i></a>
+            <div class="line"></div><a class="popup-modal page-header__login" href="#auth"><i class="icon-profile_round"></i></a>
+          </div>
+        </div>
+        <div class="mobilenav-center">
+            <ul class="main-nav">
+              <li class="main-nav__item"><a class="main-nav__link" href="/" title="Услуги">Услуги</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Цены">Цены</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Видео">Видео</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Блог">Блог</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="FAQ">FAQ</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Новости">Новости</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="О нас">О нас</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Контакты">Контакты</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div class="mobilenav-bottom"><a class="btn btn--blue btn--full popup-modal" href="#callme"><span class="icon-call"></span><span>Заказать звонок</span></a><a class="btn btn--primary btn--full popup-modal" href="#auth"><span class="icon-profile"></span><span>Войти</span></a></div>
+      </nav>
+      <div class="container">
+        <div class="page-header-inner">
+          <div class="visible__xs visible__sm"><a href="/"><img src="images/logo-m.svg" alt="ОхраПро"></a></div>
+          <div class="page-header__menu"><a class="main-nav--js" href="#"><img src="images/menu.svg" alt=""></a></div>
+          <div class="page-header__logo hidden__xs hidden__sm"><a href="/"><img src="images/logo.png" alt="ОхраПро"></a></div>
+          <nav class="nav">
+              <ul class="main-nav">
+                <li class="main-nav__item"><a class="main-nav__link" href="/" title="О нас">О нас</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="" title="Услуги">Услуги</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="" title="Цены">Цены</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="" title="Контакты">Контакты</a>
+                  <ul class="sub-nav">
+                  </ul>
+                </li>
+              </ul>
+          </nav>
+          <div class="line"></div><a class="page-header__email" href="mailto:sale@oxrapro.ru"><i class="icon-email"></i></a>
+          <div class="line"></div><a class="page-header__mail hidden__xs hidden__sm" href="mailto:sale@oxrapro.ru"><span>sale@oxrapro.ru</span></a><a class="page-header__call" href="tel:88003339887"><i class="icon-call"></i><span>8 800 333 98 87</span></a>
+          <div class="line"></div><a class="popup-modal page-header__login" href="#login"><i class="icon-profile_round"></i><span>Войти</span></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="directionPage-common h-container">
+        <div class="container relative">
+          <div class="title">
+            <h1>Экология</h1>
+            <div class="hidden__sm hidden__xs">
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item active">Экология</li>
+                <li class="breadcrumbs__item active"><a class="breadcrumbs__link" href="/"><span class="icon-home"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="is-col__xl-5 is-col__lg-7">
+            <p>Немецкий фармацевт Генри Нестле, ставший основателем компании «Нестле», наладил производство своей легендарной молочной муки farine lactée в городе Веве в Швейцарии. Данный продукт сочетал в себе коровье молоко, пшеничную муку и сахар и был разработан Генри Нестле специально для того, чтобы снизить высокий показатель смертности среди тех младенцев, которые по тем или иным причинам не могли быть вскормлены грудным молоком.</p>
+            <p>Примерно к этому времени относится и начало использования фармацевтом своего всемирно известного логотипа, представляющего собой изображение гнезда с птицами.</p>
+          </div>
+          <div class="directionPage-common__info is-row">
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__xs-12">
+              <div class="directionPage-common__number">29</div>
+              <div class="directionPage-common__txt">Выполненных <br> проекта</div>
+            </div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__xs-12">
+              <div class="directionPage-common__number">4</div>
+              <div class="directionPage-common__txt">Ответственных <br> специалиста</div>
+            </div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__xs-12">
+              <div class="directionPage-common__number">11</div>
+              <div class="directionPage-common__txt">Услуг по охране <br> труда</div>
+            </div>
+            <div class="is-col is-col__xl-3 is-col__xs-12 text__md--right"><a class="btn btn--orange" href="#"><span class="icon-call"></span><span>Консультация</span></a></div>
+          </div>
+          <h2>Услуги</h2>
+          <div class="is-row">
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Разработка паспортов опасных отходов</h4>
+                <div class="prices">Индивидуально</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Разработка документов по охране труда</h4>
+                <div class="prices">От 4 500 ₽/мес.</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Аудит охраны труда</h4>
+                <div class="prices">11 500 ₽</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Разработка документов по охране труда</h4>
+                <div class="prices">От 4 500 ₽/мес.</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12 hidden-content"><a class="prices-item" href="#">
+                <h4>Разработка документов по охране труда</h4>
+                <div class="prices">От 4 500 ₽/мес.</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Разработка паспортов опасных отходов</h4>
+                <div class="prices">Индивидуально</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Разработка документов по охране труда</h4>
+                <div class="prices">От 4 500 ₽/мес.</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Аудит охраны труда</h4>
+                <div class="prices">11 500 ₽</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12"><a class="prices-item" href="#">
+                <h4>Разработка документов по охране труда</h4>
+                <div class="prices">От 4 500 ₽/мес.</div></a></div>
+            <div class="is-col is-col__xl-3 is-col__md-4 is-col__sm-6 is-col__xs-12 hidden-content"><a class="prices-item" href="#">
+                <h4>Разработка документов по охране труда</h4>
+                <div class="prices">От 4 500 ₽/мес.</div></a></div>
+          </div>
+          <div class="videoPage-link"><a class="linkIcon showmore--js" href="#"><span class="icon-arrow_repeat"></span><span>Показать еще</span></a></div>
+        </div>
+      </section>
+      <section class="directionPage">
+        <div class="container">
+          <div class="service-list">
+            <h2>Как мы работаем?</h2>
+            <div class="is-row">
+              <div class="is-col is-col__xl-4 is-col__md-6 is-col__xs-12 service-list_item">
+                <h4>Оставьте заявку на нашем сайте</h4>
+                <p>В рамках концепции Акоффа и Стэка, восприятие марки отталкивает эмпирический рекламный блок, признавая определенные рыночные тенденции.</p>
+                <p>Рекламный клаттер, в рамках сегодняшних воззрений, допускает креативный целевой трафик.</p>
+              </div>
+              <div class="is-col is-col__xl-4 is-col__md-6 is-col__xs-12 service-list_item">
+                <h4>Подпишите договор и произведите оплату услуги</h4>
+                <p>В рамках концепции Акоффа и Стэка, восприятие марки отталкивает эмпирический рекламный блок, признавая определенные рыночные тенденции.</p>
+              </div>
+              <div class="is-col is-col__xl-4 is-col__md-6 is-col__xs-12 service-list_item">
+                <h4>Начните заниматься в удобное для вас время</h4>
+                <p>Рекламный клаттер, в рамках сегодняшних воззрений, допускает креативный целевой трафик.</p>
+                <p>Конвесия покупателя осмысленно изменяет побочный PR-эффект, расширяя долю рынка. Рекламная площадка, как следует из вышесказанного, неоднозначна.</p>
+              </div>
+              <div class="is-col is-col__xl-4 is-col__md-6 is-col__xs-12 service-list_item">
+                <h4>Оставьте заявку на нашем сайте</h4>
+                <p>В рамках концепции Акоффа и Стэка, восприятие марки отталкивает эмпирический рекламный блок, признавая определенные рыночные тенденции.</p>
+                <p>Рекламный клаттер, в рамках сегодняшних воззрений, допускает креативный целевой трафик.</p>
+              </div>
+              <div class="is-col is-col__xl-4 is-col__md-6 is-col__xs-12 service-list_item">
+                <h4>Подпишите договор и произведите оплату услуги</h4>
+                <p>В рамках концепции Акоффа и Стэка, восприятие марки отталкивает эмпирический рекламный блок, признавая определенные рыночные тенденции.</p>
+              </div>
+              <div class="is-col is-col__xl-4 is-col__md-6 is-col__xs-12 service-list_item">
+                <h4>Начните заниматься в удобное для вас время</h4>
+                <p>Рекламный клаттер, в рамках сегодняшних воззрений, допускает креативный целевой трафик.</p>
+                <p>Конвесия покупателя осмысленно изменяет побочный PR-эффект, расширяя долю рынка. Рекламная площадка, как следует из вышесказанного, неоднозначна.</p>
+              </div>
+            </div>
+          </div>
+          <div class="title">
+            <h2>Лицензии</h2>
+            <div class="hidden__sm hidden__xs"><a class="btn btn--outlined" href="#">Смотреть все</a></div>
+          </div>
+          <div class="is-row popup-gallery"><a class="is-col is-col__lg-4 is-col__md-6 is-col__xs-12 licensePage-item" href="images/sert-2.jpg"><img src="images/sert-2.jpg" alt="">
+              <h5>Сертификат на проведение общественной деятельности</h5>
+              <p>Организации оказывающие услуги охраны труда и в частности в сфере пожарной безопасности</p></a><a class="is-col is-col__lg-4 is-col__md-6 is-col__xs-12 licensePage-item" href="images/sert-2.jpg"><img src="images/sert-2.jpg" alt="">
+              <h5>Сертификат на проведение общественной деятельности</h5>
+              <p>Организации оказывающие услуги охраны труда и в частности в сфере пожарной безопасности</p></a><a class="is-col is-col__lg-4 is-col__md-6 is-col__xs-12 licensePage-item" href="images/sert-2.jpg"><img src="images/sert-2.jpg" alt="">
+              <h5>Сертификат на проведение общественной деятельности</h5>
+              <p>Организации оказывающие услуги охраны труда и в частности в сфере пожарной безопасности</p></a>
+          </div>
+        </div>
+      </section>
+      <section class="reviews h-container">
+        <div class="container relative">
+          <h2>Отзывы <span>8 из 20</span></h2>
+          <div class="swiper popup-gallery">
+            <div class="swiper-wrapper"><a class="swiper-slide" href="images/review-1.png"><img src="images/review-1.png" alt="">
+                <div class="reviews-name">Иванов И. И.</div>
+                <div class="reviews-company">Газпром</div></a><a class="swiper-slide" href="images/review-2.png"><img src="images/review-2.png" alt="">
+                <div class="reviews-name">Петров А.И.</div>
+                <div class="reviews-company">Редмонд</div></a><a class="swiper-slide" href="images/review-3.png"><img src="images/review-3.png" alt="">
+                <div class="reviews-name">Константинопольский К.К.</div>
+                <div class="reviews-company">Кассир.ру</div></a><a class="swiper-slide" href="images/review-1.png"><img src="images/review-1.png" alt="">
+                <div class="reviews-name">Иванов И. И.</div>
+                <div class="reviews-company">Газпром</div></a><a class="swiper-slide" href="images/review-2.png"><img src="images/review-2.png" alt="">
+                <div class="reviews-name">Петров А.И.</div>
+                <div class="reviews-company">Редмонд</div></a><a class="swiper-slide" href="images/review-3.png"><img src="images/review-3.png" alt="">
+                <div class="reviews-name">Константинопольский К.К.</div>
+                <div class="reviews-company">Кассир.ру</div></a><a class="swiper-slide" href="images/review-1.png"><img src="images/review-1.png" alt="">
+                <div class="reviews-name">Иванов И. И.</div>
+                <div class="reviews-company">Газпром</div></a><a class="swiper-slide" href="images/review-2.png"><img src="images/review-2.png" alt="">
+                <div class="reviews-name">Петров А.И.</div>
+                <div class="reviews-company">Редмонд</div></a><a class="swiper-slide" href="images/review-3.png"><img src="images/review-3.png" alt="">
+                <div class="reviews-name">Константинопольский К.К.</div>
+                <div class="reviews-company">Кассир.ру</div></a>
+            </div>
+            <div class="swiper-settings"><a class="btn btn--default" href="#">Смотреть все</a>
+              <div class="swiper-btn hidden__xs hidden__sm">
+                <div class="swiper-btn-prev-r swiper-btn-prev"><span class="icon-angle-left"></span></div>
+                <div class="swiper-btn-next-r swiper-btn-next"><span class="icon-angle-right"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="directionPage back--grey">
+        <div class="container">
+          <div class="projects-catalog">
+            <div class="title">
+              <h2>Проекты</h2>
+              <div class="hidden__sm hidden__xs"><a class="btn btn--outlined" href="#">Все кейсы</a></div>
+            </div>
+            <div class="is-row">
+              <div class="is-col is-col__lg-3 is-col__sm-6 is-col__xs-12">
+                <div class="projects-list_item">
+                  <div class="projects-list_img"><img src="images/firm-1.jpg" alt=""></div>
+                  <div class="projects-list_title">
+                    <h5><a href="#">Кейс компании <br> «Рэдмонд»</a></h5>
+                  </div>
+                  <div class="projects-list_desc">Между «Нестле» и «Англо-швейцарской компанией» разворачивается ожесточенная конкуренция, которая особенно обостряется.</div>
+                  <div class="projects-list_btn">
+                    <div class="button"><a class="btn btn--primary" href="#">Смотреть</a>
+                      <div class="btn--shadow btn--black"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="is-col is-col__lg-3 is-col__sm-6 is-col__xs-12 hidden__xs hidden__sm hidden__md">
+                <div class="projects-list_item">
+                  <div class="projects-list_img"><img src="images/firm-2.jpg" alt=""></div>
+                  <div class="projects-list_title">
+                    <h5><a href="#">Кейс компании <br> «Хеликс»</a></h5>
+                  </div>
+                  <div class="projects-list_desc">Между «Нестле» и «Англо-швейцарской компанией» разворачивается ожесточенная конкуренция.</div>
+                  <div class="projects-list_btn">
+                    <div class="button"><a class="btn btn--primary" href="#">Смотреть</a>
+                      <div class="btn--shadow btn--black"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="is-col is-col__lg-3 is-col__sm-6 is-col__xs-12">
+                <div class="projects-list_item">
+                  <div class="projects-list_img"><img src="images/firm-1.jpg" alt=""></div>
+                  <div class="projects-list_title">
+                    <h5><a href="#">Кейс компании <br> «Рэдмонд»</a></h5>
+                  </div>
+                  <div class="projects-list_desc">Между «Нестле» и «Англо-швейцарской компанией» разворачивается ожесточенная конкуренция, которая особенно обостряется.</div>
+                  <div class="projects-list_btn">
+                    <div class="button"><a class="btn btn--primary" href="#">Смотреть</a>
+                      <div class="btn--shadow btn--black"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="is-col is-col__lg-3 is-col__sm-6 is-col__xs-12 hidden__xs hidden__sm hidden__md">
+                <div class="projects-list_item">
+                  <div class="projects-list_img"><img src="images/firm-2.jpg" alt=""></div>
+                  <div class="projects-list_title">
+                    <h5><a href="#">Кейс компании <br> «Хеликс»</a></h5>
+                  </div>
+                  <div class="projects-list_desc">Между «Нестле» и «Англо-швейцарской компанией» разворачивается ожесточенная конкуренция.</div>
+                  <div class="projects-list_btn">
+                    <div class="button"><a class="btn btn--primary" href="#">Смотреть</a>
+                      <div class="btn--shadow btn--black"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="visible__xs visible__sm"><a class="btn btn--outlined btn--full" href="#">Все кейсы</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="directionPage">
+        <div class="container">
+          <div class="faq-list">
+            <h2>Вопросы и ответы</h2>
+            <div class="is-row between__xs">
+              <div class="is-col is-col__md-7 is-col__xs-12 accordion">
+                <div class="faqPage-item">
+                  <div class="toggle">
+                    <div class="img">
+                      <div class="icon-plus"></div>
+                    </div><span>Какие виды продукции производят предприятия Компании «Металлоинвест»?</span>
+                  </div>
+                  <div class="inner">
+                    <p>Металлоинвест производит железорудное сырье для выплавки чугуна, металлизованное сырье и товарный чугун для выплавки стали, а также широкий спектр высококачественного сортового и листового проката.</p>
+                    <p>Мы производим все виды марок мостовой стали, а также металлопрокат высокого качества, особо чистый по примесям, обладающий повышенной технологической пластичностью при горячей и холодной деформации, усталостной прочностью, проявляемой при эксплуатации деталей, высоким качеством поверхности и точностью геометрических размеров, технологичностью при термической обработке у потребителей.</p>
+                  </div>
+                </div>
+                <div class="faqPage-item">
+                  <div class="toggle">
+                    <div class="img">
+                      <div class="icon-plus"></div>
+                    </div><span>Какие виды продукции производят предприятия Компании «Металлоинвест»?</span>
+                  </div>
+                  <div class="inner">
+                    <p>Металлоинвест производит железорудное сырье для выплавки чугуна, металлизованное сырье и товарный чугун для выплавки стали, а также широкий спектр высококачественного сортового и листового проката.</p>
+                    <p>Мы производим все виды марок мостовой стали, а также металлопрокат высокого качества, особо чистый по примесям, обладающий повышенной технологической пластичностью при горячей и холодной деформации, усталостной прочностью, проявляемой при эксплуатации деталей, высоким качеством поверхности и точностью геометрических размеров, технологичностью при термической обработке у потребителей.</p>
+                  </div>
+                </div>
+                <div class="faqPage-item">
+                  <div class="toggle">
+                    <div class="img">
+                      <div class="icon-plus"></div>
+                    </div><span>Какие виды продукции производят предприятия Компании «Металлоинвест»?</span>
+                  </div>
+                  <div class="inner">
+                    <p>Металлоинвест производит железорудное сырье для выплавки чугуна, металлизованное сырье и товарный чугун для выплавки стали, а также широкий спектр высококачественного сортового и листового проката.</p>
+                    <p>Мы производим все виды марок мостовой стали, а также металлопрокат высокого качества, особо чистый по примесям, обладающий повышенной технологической пластичностью при горячей и холодной деформации, усталостной прочностью, проявляемой при эксплуатации деталей, высоким качеством поверхности и точностью геометрических размеров, технологичностью при термической обработке у потребителей.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="is-col is-col__xl-4 is-col__md-5 is-col__xs-12">
+                <div class="project-form">
+                  <h3>Не нашли ответ на свой вопрос?</h3><a class="btn btn--warning" href="#">Все вопросы</a>
+                </div>
+                <div class="present-form">
+                  <h3>Презентация компании</h3><a href="#">Смотреть</a><img src="images/presentation.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer-top">
+        <div class="container">
+          <div class="visible__xs visible__sm"><a class="main-footer--js" href="#"><img src="images/menu.svg" alt=""></a></div>
+            <ul class="main-nav">
+              <li class="main-nav__item"><a class="main-nav__link" href="/" title="Услуги">Услуги</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Цены">Цены</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Видео">Видео</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Блог">Блог</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="FAQ">FAQ</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Новости">Новости</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="О нас">О нас</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="" title="Контакты">Контакты</a>
+                <ul class="sub-nav">
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="page-footer-bottom">
+        <div class="container">
+          <div class="is-row between__xs middle__xs">
+            <div class="is-col is-col__md-4 is-col__xs-12">
+              <div class="page-footer__mail"><span class="icon-email"></span><a href="mailto:sale@oxrapro.ru">sale@oxrapro.ru</a></div>
+              <div class="page-footer__adr">г. Санкт-Петербург, ул. Вербная д. 27, лит А, оф. 825</div>
+            </div>
+            <div class="is-col is-col__lg-2 is-col__md-4 is-col__xs-12 text--center">
+              <ul class="list--inline social">
+                <li><a href="#"><span class="icon-vk"></span></a></li>
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+            <div class="is-col is-col__xl-5 is-col__lg-6 is-col__md-4 is-col__xs-12 text__lg--right hidden__xs hidden__sm">
+              <ul class="list--inline">
+                <li class="button"><a class="btn btn--primary popup-modal" href="#callme">Позвонить нам</a>
+                  <div class="btn--shadow btn--black"></div>
+                </li>
+                <li class="button"><a class="btn btn--info popup-modal" href="#auth"><span class="icon-profile_round"></span><span>Войти</span></a>
+                  <div class="btn--shadow btn--white"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="is-row between__xs middle__xs page-footer-txt">
+            <div class="is-col hidden__xs hidden__sm">
+              <div class="page-footer__copy">ОхраПро 2013-2018 © <br> Все права защищены</div>
+            </div>
+            <div class="is-col app"><a href="#"><img src="images/app-1.png" alt></a><a href="#"><img src="images/app-2.png" alt></a></div>
+            <div class="is-col hidden__xs hidden__sm"><a href="#">Пользовательское <br> соглашение</a></div>
+            <div class="is-col">
+              <div class="page-footer__link">Разработка и дизайн —<br><a href="#">Digital Production CloudMill</a></div>
+              <div class="visible__sm visible__xs">
+                <div class="page-footer__copy">ОхраПро 2013-2018 © <br> Все права защищены</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src="scripts/plugins.js"></script>
+<script src="scripts/main.js"></script>
+  </body>
+</html>
