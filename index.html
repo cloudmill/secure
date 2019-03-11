@@ -63,10 +63,11 @@
           </div>
         </div>
         <div class="form__group">
-            <div class="checkbox">
-              <input type="checkbox" id="agreement1">
-              <label for="agreement1">Даю согласие на обработку персональных данных</label>
-            </div>
+          <div class="checkbox">
+            <input type="checkbox" id="agr1" checked>
+            <label for="agr1"></label>
+            <div class="label">Даю согласие на <a href="#">обработку персональных данных</a></div>
+          </div>
         </div>
         <button class="btn btn--blue" type="submit">Отправить</button>
       </form>
@@ -88,8 +89,9 @@
         </div>
         <div class="form__group">
             <div class="checkbox">
-              <input type="checkbox" id="ready">
-              <label for="ready">Я ознакомлен с документами учебного центра</label>
+              <input type="checkbox" id="ready" checked>
+              <label for="ready"></label>
+              <div class="label">Я ознакомлен с документами учебного центра</div>
             </div>
         </div>
         <div class="flexBtn">
@@ -187,7 +189,7 @@
                 </li>
               </ul>
           </nav>
-          <div class="line"></div><a class="page-header__email" href="mailto:sale@oxrapro.ru"><i class="icon-email"></i></a>
+          <div class="line"></div><a class="page-header__email popup-modal" href="#callme"><i class="icon-email"></i></a>
           <div class="line"></div><a class="page-header__mail hidden__xs hidden__sm" href="mailto:sale@oxrapro.ru"><span>sale@oxrapro.ru</span></a><a class="page-header__call" href="tel:88003339887"><i class="icon-call"></i><span>8 800 333 98 87</span></a>
           <div class="line"></div><a class="popup-modal page-header__login" href="#login"><i class="icon-profile_round"></i><span>Войти</span></a>
         </div>
@@ -279,7 +281,9 @@
                   <div>В случае необходимости, <span class="text--success">специалисты бесплатно выезжают</span> на объект для оценки сложности</div>
                   <div>В штате компании работают <span class="text--success">экологи по воздуху, по воде, по отходам</span></div>
                 </div>
-                <div class="button"><a class="btn btn--info" href="#">Подробнее</a></div>
+                <div class="button"><a class="btn btn--info" href="#">Подробнее</a>
+                  <div class="btn--shadow btn--white"></div>
+                </div>
               </div>
               <div class="tabs__content" id="tab03">
                 <div class="column column-2">
@@ -288,14 +292,18 @@
                   <div>В штате компании работают <span class="text--success">экологи по воздуху, по воде, по отходам</span></div>
                   <div>Всегда держим в курсе наших заказчиков об <span class="text--success">изменениях в законодательстве</span> и оперативно реагируем на них</div>
                 </div>
-                <div class="button"><a class="btn btn--info" href="#">Подробнее</a></div>
+                <div class="button"><a class="btn btn--info" href="#">Подробнее</a>
+                  <div class="btn--shadow btn--white"></div>
+                </div>
               </div>
               <div class="tabs__content" id="tab04">
                 <div class="column column-2">
                   <div><span class="text--success">Работаем 365 дней в году.</span> Вам не нужно заботиться о том, что штатный эколог уйдет в отпуск или заболеет</div>
                   <div>Автоматизация позволяет нам быть всегда на связи. Мы ведем <span class="text--success">учет и контроль входящих звонков.</span> Максимальное время ответа наших специалистов 15 минут</div>
                 </div>
-                <div class="button"><a class="btn btn--info" href="#">Подробнее</a></div>
+                <div class="button"><a class="btn btn--info" href="#">Подробнее</a>
+                  <div class="btn--shadow btn--white"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -416,99 +424,35 @@
       <section class="news">
         <div class="container">
           <h2>Новости</h2>
-          <div class="swiper-news swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="news-inner">
-                  <div class="is-col__xl-6 is-col__lg-8 is-col__xs-12 flex">
-                    <h3>ОхраПро попала в топ 10 быстрорастущих компаний в России</h3>
-                    <div class="news-date">27 декабря 2018</div>
-                    <div class="flex-auto-top">
-                      <div class="button"><a class="btn btn--primary" href="#">Читать</a>
-                        <div class="btn--shadow btn--white"></div>
-                      </div><a class="btn btn--light" href="#">Все новости</a>
-                    </div>
-                  </div>
-                </div><img src="images/news-main.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <div class="news-inner">
-                  <div class="is-col__xl-6 is-col__lg-8 is-col__xs-12 flex">
-                    <h3>ОхраПро попала в топ 10 быстрорастущих компаний в России</h3>
-                    <div class="news-date">27 декабря 2018</div>
-                    <div class="flex-auto-top">
-                      <div class="button"><a class="btn btn--primary" href="#">Читать</a>
-                        <div class="btn--shadow btn--white"></div>
-                      </div><a class="btn btn--light" href="#">Все новости</a>
-                    </div>
-                  </div>
-                </div><img src="images/news-main.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <div class="news-inner">
-                  <div class="is-col__xl-6 is-col__lg-8 is-col__xs-12 flex">
-                    <h3>ОхраПро попала в топ 10 быстрорастущих компаний в России</h3>
-                    <div class="news-date">27 декабря 2018</div>
-                    <div class="flex-auto-top">
-                      <div class="button"><a class="btn btn--primary" href="#">Читать</a>
-                        <div class="btn--shadow btn--white"></div>
-                      </div><a class="btn btn--light" href="#">Все новости</a>
-                    </div>
-                  </div>
-                </div><img src="images/news-main.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <div class="news-inner">
-                  <div class="is-col__xl-6 is-col__lg-8 is-col__xs-12 flex">
-                    <h3>ОхраПро попала в топ 10 быстрорастущих компаний в России</h3>
-                    <div class="news-date">27 декабря 2018</div>
-                    <div class="flex-auto-top">
-                      <div class="button"><a class="btn btn--primary" href="#">Читать</a>
-                        <div class="btn--shadow btn--white"></div>
-                      </div><a class="btn btn--light" href="#">Все новости</a>
-                    </div>
-                  </div>
-                </div><img src="images/news-main.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <div class="news-inner">
-                  <div class="is-col__xl-6 is-col__lg-8 is-col__xs-12 flex">
-                    <h3>ОхраПро попала в топ 10 быстрорастущих компаний в России</h3>
-                    <div class="news-date">27 декабря 2018</div>
-                    <div class="flex-auto-top">
-                      <div class="button"><a class="btn btn--primary" href="#">Читать</a>
-                        <div class="btn--shadow btn--white"></div>
-                      </div><a class="btn btn--light" href="#">Все новости</a>
-                    </div>
-                  </div>
-                </div><img src="images/news-main.jpg" alt="">
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-          <div class="swiper-thumbs swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
+          <div class="news-main">
+            <div class="news-inner">
+              <div class="is-col__xl-6 is-col__lg-8 is-col__xs-12 flex">
+                <h3>ОхраПро попала в топ 10 быстрорастущих компаний в России</h3>
                 <div class="news-date">27 декабря 2018</div>
-                <h4>Вручение премии «Лучшая компания 2018 года»</h4>
+                <div class="flex-auto-top">
+                  <div class="button"><a class="btn btn--primary" href="#">Читать</a>
+                    <div class="btn--shadow btn--white"></div>
+                  </div><a class="btn btn--light" href="#">Все новости</a>
+                </div>
               </div>
-              <div class="swiper-slide">
+            </div><img src="images/news-main.jpg" alt="">
+          </div>
+          <div class="is-row">
+            <div class="is-col news-column"><a href="#">
+                <div class="news-date">27 декабря 2018</div>
+                <h4>Вручение премии «Лучшая компания 2018 года»</h4></a></div>
+            <div class="is-col news-column"><a href="#">
                 <div class="news-date">22 декабря 2018</div>
-                <h4>Посещение детской школы творчества</h4>
-              </div>
-              <div class="swiper-slide">
+                <h4>Посещение детской школы творчества</h4></a></div>
+            <div class="is-col news-column"><a href="#">
                 <div class="news-date">24 декабря 2018</div>
-                <h4>Новый образовательный партнер Henkeu</h4>
-              </div>
-              <div class="swiper-slide">
+                <h4>Новый образовательный партнер Henkeu</h4></a></div>
+            <div class="is-col news-column hidden__md"><a href="#">
                 <div class="news-date">10 января 2019</div>
-                <h4>Начало поставок средств индивидуальной защиты</h4>
-              </div>
-              <div class="swiper-slide">
+                <h4>Начало поставок средств индивидуальной защиты</h4></a></div>
+            <div class="is-col news-column hidden__md"><a href="#">
                 <div class="news-date">22 декабря 2018</div>
-                <h4>Посещение детской школы творчества</h4>
-              </div>
-            </div>
+                <h4>Посещение детской школы творчества</h4></a></div>
           </div>
         </div>
       </section>
