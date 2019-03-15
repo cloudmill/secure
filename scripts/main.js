@@ -205,12 +205,16 @@ $(document).ready(function () {
 		var tab_id = $(elem).attr('data-tab');
 		$(mainClass + ' ul.tabs__caption li').removeClass('active');
 		$(mainClass + ' .tabs__content').removeClass('active');
+		$('.aos-init').removeClass('aos-animate');
 		$(elem).addClass('active');
 		$("#" + tab_id).addClass('active');
 
 		if (mainClass === '.directions') {
 			var dataTitle = $(elem).attr('data-title');
 			$(mainClass).find('h2 + h2').text(dataTitle);
+			setTimeout(function () {
+				$("#" + tab_id).find('.aos-init').addClass('aos-animate');
+			}, 100);
 		}
 
 		if (mainClass === '.videotabs') {
@@ -322,6 +326,12 @@ $(document).ready(function () {
 		$grid.isotope('layout');
 	}
 	//accordion
+
+	// animation
+	AOS.init({
+		once: true
+	});
+	// animation
 });
 // ready
 
