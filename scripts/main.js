@@ -223,6 +223,7 @@ $(document).ready(function () {
 			var btnLink = $(elem).attr('data-link');
 			var positionLeft = $(elem).position().left;
 			var widthEl = $(elem).width();
+			$(mainClass).find('.container').addClass('aos-animate');
 
 			$('.tabs-inner .line').css('left', positionLeft);
 			$('.tabs-inner .line').css('width', widthEl);
