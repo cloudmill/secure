@@ -205,12 +205,12 @@ $(document).ready(function () {
 		var tab_id = $(elem).attr('data-tab');
 		$(mainClass + ' ul.tabs__caption li').removeClass('active');
 		$(mainClass + ' .tabs__content').removeClass('active');
-		$('.aos-init').removeClass('aos-animate');
 		$(elem).addClass('active');
 		$("#" + tab_id).addClass('active');
 
 		if (mainClass === '.directions') {
 			var dataTitle = $(elem).attr('data-title');
+			$(mainClass + ' .aos-init').removeClass('aos-animate');
 			$(mainClass).find('h2 + h2').text(dataTitle);
 			setTimeout(function () {
 				$("#" + tab_id).find('.aos-init').addClass('aos-animate');
@@ -223,6 +223,7 @@ $(document).ready(function () {
 			var btnLink = $(elem).attr('data-link');
 			var positionLeft = $(elem).position().left;
 			var widthEl = $(elem).width();
+			$(mainClass + ' .aos-init').removeClass('aos-animate');
 			$(mainClass).find('.container').addClass('aos-animate');
 
 			$('.tabs-inner .line').css('left', positionLeft);
@@ -359,9 +360,9 @@ function initMap() {
 	for (i = 0; i < locations.length; i++) {
 		marker = new google.maps.Marker({
 			position: new google.maps.LatLng(locations[i][0], locations[i][1]),
-			map: map
+			map: map,
+			icon: "images/icons/mark.png"
 		});
-		// icon: "images/icons/bubble-a.png"
 		marker.set('data-href', hrefId[i]);
 		markers.push(marker);
 		// google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {

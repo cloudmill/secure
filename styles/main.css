@@ -2636,20 +2636,35 @@ button.close {
     @media screen and (min-width: 1360px) {
       .page-footer-bottom .app a + a {
         margin-left: 60px; } }
+    @media screen and (min-width: 960px) and (max-width: 1199px) {
+      .page-footer-bottom .copy {
+        width: 30%; } }
   .page-footer__copy {
     color: #626262;
     margin-top: 20px; }
     @media screen and (min-width: 720px) {
       .page-footer__copy {
-        margin-top: 0; } }
+        margin-top: 5px; } }
   .page-footer__link {
     margin-top: 20px; }
     @media screen and (min-width: 720px) {
       .page-footer__link {
         text-align: right;
         margin-top: 0; } }
+    .page-footer__link span, .page-footer__link img, .page-footer__link a {
+      display: inline-block;
+      vertical-align: sub; }
+      @media screen and (min-width: 720px) and (max-width: 1199px) {
+        .page-footer__link span, .page-footer__link img, .page-footer__link a {
+          display: block; } }
+    @media screen and (min-width: 720px) and (max-width: 959px) {
+      .page-footer__link img {
+        width: 200px; } }
     .page-footer__link a {
       color: #0067da !important; }
+      @media screen and (min-width: 960px) {
+        .page-footer__link a {
+          margin-left: 15px; } }
       .page-footer__link a:hover {
         color: #fff !important; }
   .page-footer__mail > * {
@@ -4254,6 +4269,18 @@ button.close {
     .directions .tabs__caption li.active::after, .directions .tabs__caption li:hover::after {
       width: 100%; }
 
+#tab01 span {
+  color: #83c550; }
+
+#tab02 span {
+  color: #3f68e6; }
+
+#tab03 span {
+  color: #fb5820; }
+
+#tab04 span {
+  color: #f73232; }
+
 .reviews {
   color: #fff;
   background-color: #0067da;
@@ -4675,6 +4702,13 @@ button.close {
       .maps-svg path:hover {
         stroke-width: 10; } }
 
+.flexString {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4729,6 +4763,11 @@ button.close {
   .newsPage-main .button, .newsPage-main .btn, .newsPage-main .button-nav li, .button-nav .newsPage-main li {
     width: 100%; } }
 
+.newsPage a:not(.btn) {
+  color: #303030; }
+  .newsPage a:not(.btn):hover {
+    color: #0067da; }
+
 .newsPage-item {
   background-color: #f3f8fe;
   position: relative;
@@ -4759,10 +4798,6 @@ button.close {
       padding: 60px 90px 60px 40px; } }
   .newsPage-item h4 {
     font-family: 'TTNorms-Regular'; }
-    .newsPage-item h4 a {
-      color: #303030; }
-      .newsPage-item h4 a:hover {
-        color: #0067da; }
   .newsPage-item .tag {
     position: absolute;
     top: 0;
@@ -5195,6 +5230,16 @@ button.close {
   @media screen and (min-width: 720px) {
     .service-full {
       padding-bottom: 100px; } }
+  .service-full:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: -webkit-linear-gradient(255deg, rgba(39, 40, 48, 0) 0%, rgba(39, 40, 48, 0.83) 100%);
+    background-image: -moz-linear-gradient(255deg, rgba(39, 40, 48, 0) 0%, rgba(39, 40, 48, 0.83) 100%);
+    background-image: linear-gradient(-165deg, rgba(39, 40, 48, 0) 0%, rgba(39, 40, 48, 0.83) 100%); }
   @media screen and (min-width: 960px) {
     .service-full.h-container {
       min-height: 100vh; } }
@@ -5215,7 +5260,9 @@ button.close {
     -webkit-justify-content: space-between;
        -moz-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    position: relative;
+    z-index: 1; }
   .service-full .breadcrumbs {
     text-align: right; }
     .service-full .breadcrumbs li, .service-full .breadcrumbs a, .service-full .breadcrumbs li::before {
@@ -5234,16 +5281,16 @@ button.close {
         padding: 40px 30px; } }
     @media screen and (min-width: 1200px) {
       .service-full_price {
-        padding: 60px 50px; } }
+        padding: 50px 40px; } }
     .service-full_price .price {
-      font-size: 55px;
+      font-size: 45px;
       font-weight: 300;
       font-family: 'TTNorms-Light';
       line-height: 1;
       margin-bottom: 15px; }
       @media screen and (min-width: 960px) {
         .service-full_price .price {
-          font-size: 83px; } }
+          font-size: 60px; } }
     .service-full_price p {
       color: #8fb8ff;
       font-size: 23px;
