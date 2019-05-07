@@ -272,10 +272,12 @@ $(document).ready(function () {
 		// }, 1000);
 	});
 	$('#filters').on('click', 'li', function () {
+		$('.grid-item').find('.aos-init').removeClass('aos-animate');
 		$('#filters li').removeClass('active');
 		$(this).addClass('active');
 		var filterValue = $(this).data('filter');
 		$grid.isotope({ filter: filterValue });
+		$(filterValue).find('.aos-init').addClass('aos-animate');
 	});
 	$('.showmore--js').click(function () {
 		$(this).hide();
