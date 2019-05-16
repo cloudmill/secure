@@ -2762,12 +2762,43 @@ button.close {
 
 .page-header {
   position: relative; }
+  .page-header__logo {
+    display: none; }
+    @media screen and (min-width: 720px) {
+      .page-header__logo {
+        display: block; } }
+    .page-header__logo a {
+      display: block;
+      width: 132px;
+      height: 36px;
+      background: url("../images/logo-b.png") no-repeat center/cover; }
+    .page-header__logo-m {
+      display: none; }
+      @media screen and (max-width: 719px) {
+        .page-header__logo-m {
+          display: block; } }
+      .page-header__logo-m a {
+        width: 20px;
+        height: 23px;
+        display: block;
+        background: url("../images/logo-m.svg") no-repeat center/auto 100%; }
+  .page-header__menu a {
+    display: block;
+    width: 22px;
+    height: 14px;
+    background: url("../images/menu-b.svg") no-repeat center/cover; }
   .page-header.fixed {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     z-index: 20; }
+    .page-header.fixed .page-header__logo a {
+      background: url("../images/logo.png") no-repeat center/cover; }
+    .page-header.fixed .page-header__logo-m a {
+      background: url("../images/logo-m.svg") no-repeat center/auto 100%; }
+    .page-header.fixed .page-header__menu a {
+      background: url("../images/menu.svg") no-repeat center/cover; }
     .page-header.fixed span, .page-header.fixed i, .page-header.fixed a:not(.btn) {
       color: #fff; }
       .page-header.fixed span:hover, .page-header.fixed i:hover, .page-header.fixed a:not(.btn):hover {
